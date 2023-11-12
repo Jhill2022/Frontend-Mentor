@@ -61,7 +61,7 @@ a {
 .hero-bg{
     background-image: url("./images/bg-intro-mobile.svg");
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 610px;
     z-index: -1;
     position: relative;
 }
