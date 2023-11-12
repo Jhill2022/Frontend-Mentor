@@ -1,221 +1,74 @@
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap');
 
-body{
-    width: 100vw;
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    font-size: 18px;
-    font-family: 'Public Sans', sans-serif;
-    font-weight: lighter;
-    
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-size: 18px;
+  font-family: 'Public Sans', sans-serif;
+  font-weight: 300;
+}
+ul,
+a {
+  list-style-type: none;
+  text-decoration: none;
 }
 
-main{
-    width: 100%;
-    height: 100%;
-}
-
-.intro-bank h1{
-    font-size: 40px;
-}
-
-.intro-sec{
-    
-   display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    
-    height: 100%;
-    
-    
-    
-}
-
-.intro-bank{
-    /* padding: 3rem 2rem; */
-    width: 29%;
-    
-    margin-left: 9%;
-    
-}
-
-
-
-.second-intro{
-    height: 100%;
-    width: 82%;
-    background-image: url("./images/bg-intro-desktop.svg");
-    background-repeat: no-repeat;
-    background-position: 186px -264px;
-    overflow: visible;
-}
-
-.mock{
-    background-image: url("./images/image-mockups.png");
-    background-repeat: no-repeat;
-    background-position: 369px -103px;
-    background-size: 80%;
-    height: 100%;
-    overflow: visible;
-   
-}
-.easy-sec{
-    width: 82%;
-   
-}
-
-.sec-2{
-    padding: 4rem 0;
-    background: #F4F5F7;
-    display: flex;
-    align-items: center;
-    justify-content:center;
-    
-}
-
-.easy-bank{
-    width: 502px;
-    margin-bottom: 3.5rem;
-}
-
-.easybank-icons{
-    display: flex;
-    gap: 1.5rem;
-    width: 89%;
-    justify-content: space-between;
-}
-
-.easybank-icons article p{
-    width: 231px;
-    color: #B4B4BC;
-}
-  
-.easybank-icons article img{
-    margin-bottom: 1rem;
-}
-
-.head{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 0.5rem 0;
-    margin-left: 3rem;
-   
-}
-
-.articles{
-    display: grid;
-    grid-template-columns: repeat(4, 2fr);
-    gap: 2rem;
-    height: 100%;
-}
-
-h2{
-    font-size: 28px;
-}
-.article1 img{
-    width: 100%;
-   height: 213px;
-   border-top-left-radius: 5px;
-   border-top-right-radius: 5px;
-}
-.article1{
-    width: 282px;
-    height: 441px;
-    border-radius: 10px;
-    background: #FFFFFF;
-   
-}
-
-.list{
-    list-style-type: none;
-    display: flex;
-    gap: 2rem;
-    
-    
-}
-
-.inside-sec-3{
-    width: 82%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 5rem 0;
-    
-}
-
-
-
-.sec-3{
-   display: flex;
-   align-items: center;
-   justify-content: center;
-    background: #FAFAFA;
-}
-
-
-.list a{
-    text-decoration: none;
-    color: hsl(0, 2%, 36%);
-}
-
-
-.btn{
-    color: white;
-    border: none;
-    padding: 1rem 2.5rem;
-    border-radius:20px;
-    background: linear-gradient(90deg, #30CF6D, #2BB9C9);
-}
-
-footer{
-    background: #2D314E;
-    width: 100%;
-    height: 29%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.outter-foot{
+/* header */
+.header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
- 
-   width: 82%;
+  padding: 1rem 2rem;
+  position: relative;
+  z-index: 1;
+  
 }
 
-ul{
-    list-style-type: none;
+.nav-list {
+  display: none;
 }
 
-.logo-socials{
+.nav-list li a {
+  color: darkgrey;
+}
+.request-btn{
+    display: none;
+}
+
+@media (min-width: 800px) {
+  .nav-list {
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    gap: 3rem;
-}
+    gap: 1rem;
+  }
+  .hamburger-icon {
+    display: none;
+  }
 
-.btn-easy p{
-    width: 288px;
-    color: grey;
-}
-
-.btn-easy{
-    display: flex;
-    flex-direction: column;
-}
-
-.btn-easy button{
-    align-self: flex-end;
-}
-
-.outter-foot li{
-    line-height: 2rem;
+  .request-btn {
+    display: inline;
+    width: 166px;
+    height: 46px;
+    border: none;
+    border-radius: 33px;
     color: white;
+    background: linear-gradient(to left, #30d35c, #2ab6d9);
+  }
 }
 
-.latest-articles{
-    width: 100%;
+
+/* Hero section */
+.hero-bg{
+    background-image: url("./images/bg-intro-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    z-index: -1;
+    position: relative;
 }
+
+.hero-bg img{
+    width: 650px;
+    margin-top: -230px;
+   position: relative;
+}
+
