@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap');
-
+*{
+  box-sizing: border-box;
+  padding: 0;
+    margin: 0;
+}
 body {
   margin: 0;
   padding: 0;
@@ -14,15 +18,14 @@ a {
   text-decoration: none;
 }
 
-/* header */
+/*-------------------------------------
+ Nav section 
+ -------------------------------------*/
 .header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  position: relative;
-  z-index: 1;
-  
+  padding: 2.5rem 2.5rem;
 }
 
 .nav-list {
@@ -32,11 +35,15 @@ a {
 .nav-list li a {
   color: darkgrey;
 }
-.request-btn{
-    display: none;
+.request-btn {
+  display: none;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 1021px) {
+  .header-container {
+    padding: 0 2rem;
+  }
+
   .nav-list {
     display: flex;
     gap: 1rem;
@@ -56,19 +63,185 @@ a {
   }
 }
 
+/*-------------------------------------
+ Hero section 
+ -------------------------------------*/
+.hero-bg {
+  background-image: url('./images/bg-intro-mobile.svg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  overflow-y: hidden;
+  height: 447px;
+  width: 100%;
+}
 
-/* Hero section */
-.hero-bg{
-    background-image: url("./images/bg-intro-mobile.svg");
-    background-repeat: no-repeat;
-    background-size: 690px;
-    z-index: -1;
+.hero-bg img {
+  width: 95%;
+  position: relative;
+  top: -4.8rem;
+  left: 1rem;
+}
+
+.btn {
+  width: 195px;
+  /* height: 254px; */
+  border: none;
+  border-radius: 33px;
+  color: white;
+  background: linear-gradient(to left, #30d35c, #2ab6d9);
+  padding: 16px 25px;
+}
+
+.hero-sec {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2rem;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 19rem;
+}
+
+.hero-content p {
+  color: darkgray;
+  width: 23rem;
+}
+
+.img-bottom {
+  display: block;
+  width: 200px; /* Adjust the width */
+  position: relative;
+  top: -100px; /* Adjust the positioning */
+  /* Add any other necessary styles */
+}
+
+/* Adjust the .hero-imgs container to position the images */
+.hero-imgs {
+  position: relative;
+  width: 21em;
+}
+
+@media (max-width: 1023px) {
+  .hero-imgs {
+    display: none;
+  }
+}
+@media (min-width: 1024px) {
+  .hero-bg {
+    display: none;
+  }
+
+  .img-top {
     position: relative;
+    width: 42em;
+    top: 2em;
+    left: 17em;
+  }
+
+  .img-bottom {
+    width: 57em;
+    position: absolute;
+    top: -3em;
+    left: 11em;
+    z-index: -1;
+  }
+  .hero-sec {
+    width: 100%;
+    flex-direction: row-reverse;
+    overflow-y: hidden;
+    height: 34em;
+  }
+
+  .hero-content {
+    max-width: 16rem;
+    text-align: left;
+    align-items: flex-start;
+    
+  }
+
+  .hero-content h1 {
+    font-size: 4.2rem;
+    font-weight: 400;
+    width: 8.5em;
+  }
+  .hero-content p {
+    width: 21em;
+    margin-top: -2em;
+  }
+}
+/*-------------------------------------
+EASYBANK SECTION 
+ -------------------------------------*/
+
+.easy-bank {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background: #f4f5f7;
+  margin-top: 4rem;
+  padding: 4rem 0;
 }
 
-.hero-bg img{
-    width: 650px;
-    margin-top: -230px;
-   position: relative;
+.easy-content,
+.why-us {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
+.easy-content p,
+.why-us p {
+  width: 23rem;
+}
+
+@media (min-width: 1024px) {
+  .easy-bank {
+    flex-wrap: wrap;
+    padding: 7rem 5rem;
+  }
+
+  .inside-easy-bank{
+    max-width: 65rem;
+  }
+  .easy-all-content {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .why-us p {
+    font-size: 0.9rem;
+
+    color: #9698a6;
+    font-weight: 300;
+  }
+  .easy-all-content .easy-content p{
+      color: #9698a6;
+      font-weight: 300;
+      font-size: 0.9rem;
+      width: 15em;
+  
+  }
+
+  .easy-all-content .easy-content h2{
+   font-weight: 400;
+   font-size: 1rem;
+  }
+  .easy-content{
+    text-align: center;
+  }
+
+  .why-us{
+  width: 100%;
+  align-items: flex-start;
+  }
+}
